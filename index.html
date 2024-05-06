@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Banking website</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body class="bg-color-primary text-color-white tracking-wider">
+        <header>
+            <nav class="container flex justify-between items-center">
+                <div class="py-5 text-color-secondary font-bold text-3xl">
+                    <a href="#home">
+                        <span class="text-color-white">Light</span>Code.
+                    </a>
+                </div>
+                <div>
+                    <ul class="hidden lg:flex items-center space-x-6">
+                        <li><a href="#home" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
+                        <li><a href="#features" class="hover:text-color-secondary ease-in duration-200">Features</a></li>
+                        <li><a href="#testimonial" class="hover:text-color-secondary ease-in duration-200">Testimonial</a></li>
+                        <li><a href="#pricing" class="hover:text-color-secondary ease-in duration-200">Pricing</a></li>
+                        <li><a href="#blog" class="hover:text-color-secondary ease-in duration-200">Blog</a></li>
+                        <li><a href="#contact" class="hover:text-color-secondary ease-in duration-200">Contact</a></li>
+
+                        <li><button class="btn">free trial</button></li>
+                    </ul>
+                </div>
+
+                <!-- Mobile screen Hamburger, z-50 es la x-->
+                <div id="hamburger" class="lg:hidden cursor-pointer z-50">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <!-- Menú dentro de la hamburguesa-->
+                <div id="menu" class="hidden bg-color-primary-dark h-[100vh] absolute inset-0">
+                    <ul class="h-full grid place-items-center py-20">
+                        <li><a id="hLink" href="" class="hover:text-color-secondary ease-in duration-200">Home</a></li>
+                        <li><a id="hLink" href="" class="hover:text-color-secondary ease-in duration-200">Features</a></li>
+                        <li><a id="hLink" href="" class="hover:text-color-secondary ease-in duration-200">Testimonial</a></li>
+                        <li><a id="hLink" href="" class="hover:text-color-secondary ease-in duration-200">Pricing</a></li>
+                        <li><a id="hLink" href="" class="hover:text-color-secondary ease-in duration-200">Blog</a></li>
+                        <li><a id="hLink" href="" class="hover:text-color-secondary ease-in duration-200">Contact</a></li>
+
+                        <li><button class="btn">free trial</button></li> 
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+        <main>
+            <section id="home">
+                <div class="blob1"></div>
+                <div class="blob2"></div>
+                <div class="container py-20">
+                    <div class="flex flex-col items-center z-20 md:flex-row">
+                        <div class="text-center mb-12 md:text-left md:w-1/2 md:pr-10">
+                            <h1 class="title">Awesome App for Your Financial</h1>                            
+                            <p class="leading-relaxed mb-10">This should be used to tell a story and let your users know a little more about app and it's use, How can benefit them.</p>                            
+                            <button class="btn">download app</button>
+                        </div>
+                        <div class="md:w-1/2">
+                            <img src="./img/hero4.png" alt=""/>                            
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="features" class="bg-color-primary-light">
+                <div class="container py-20">
+                    <div class="text-center m-auto mb-20 md:w-1/2">
+                        <h4 class="font-bold text-color-secondary mb-4">Our Future</h4>
+                        <h1 class="title">Easy To Manage Your All Payments By Our App</h1>
+                    </div>
+                    <div class="grid lg:grid-cols-3 md:grid-cols-2 gap-12 lg:gap-8 px-4 sm:px-6 lg:px-8">
+                        <!-- card no 1-->
+                        <div class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+                            <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+                                <i class="fa-solid fa-calendar-days text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold py-4">Expense Trackering</h3>
+                            <p class="leading-relaxed">We use an application desgined a testing gnose to keep away</p>
+                        </div>
+                        <!-- card no 2-->
+                        <div class="bg-color-primary-dark border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+                            <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+                                <i class="fa-solid fa-calendar-days text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold py-4">Finance Snapshot</h3>
+                            <p class="leading-relaxed">We use an application desgined a testing gnose to keep away</p>
+                        </div>
+                        <!-- card no 3-->
+                        <div class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
+                            <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
+                                <i class="fa-solid fa-calendar-days text-4xl"></i>
+                            </div>
+                            <h3 class="text-xl font-bold py-4">Support 24/24</h3>
+                            <p class="leading-relaxed">We use an application desgined a testing gnose to keep away</p>
+                        </div>                        
+                    </div>
+                </div>
+            </section>
+            
+            <section id="saving-money">           
+                <div class="container py-20 relative">
+                    <div class="blob1"></div>
+                    <div class="blob2"></div>     
+                    <div class="flex flex-col items-center justify-between md:flex-row">
+                        <div class="mb-12 md:w-1/2">
+                            <img src="./img/hero3.png" alt="">
+                        </div>
+                        <div class="text-center md:text-left md:w-1/2 md:ml-20">
+                            <h4 class="font-bold text-color-secondary mb-4">Saving Money</h4>
+                            <h1 class="title mb-4">Best Financing App To Save Your Money</h1>
+                            <p class="leading-relaxed mb-4">Best financing app ever in the world. Easy to use and very user friendly for mobile banking. You can control your card easily and send money one just one click.</p>
+                            <button class="btn">Read More</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!--Agrego Javasript-->
+        <script>
+            //Mobile menu
+            const hamburger = document.querySelector('#hamburger');
+            const menu = document.querySelector('#menu');
+            const hLink = document.querySelector('#hLink');
+            const faSolid = document.querySelector('.fa-solid');
+
+            //Hace que se muestre de nuevo el menú
+            hamburger.addEventListener("click", () => {
+                menu.classList.toggle('hidden');
+                faSolid.classList.toggle('fa-xmark')
+            })
+
+            //Cuando doy click me redirecciona
+            hLink.forEach(link => {
+                link.addEventListener('click', () => {
+                    menu.classList.toggle('hidden');
+                    faSolid.classList.toggle('fa-xmark');
+                })
+            })
+        </script>
+
+
+    </body>
+</html>
