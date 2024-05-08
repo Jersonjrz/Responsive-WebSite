@@ -86,7 +86,7 @@
                         <!-- card no 2-->
                         <div class="bg-color-primary-dark border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
                             <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
-                                <i class="fa-solid fa-calendar-days text-4xl"></i>
+                                <i class="fa-solid fa-chart-column text-4xl"></i>
                             </div>
                             <h3 class="text-xl font-bold py-4">Finance Snapshot</h3>
                             <p class="leading-relaxed">We use an application desgined a testing gnose to keep away</p>
@@ -94,7 +94,7 @@
                         <!-- card no 3-->
                         <div class="border-2 border-solid border-color-gray text-center py-20 px-5 rounded-2xl cursor-pointer hover:bg-color-primary-dark ease-in duration-200">
                             <div class="bg-color-secondary inline-block rounded-2xl py-5 px-6">
-                                <i class="fa-solid fa-calendar-days text-4xl"></i>
+                                <i class="fa-solid fa-phone text-4xl"></i>
                             </div>
                             <h3 class="text-xl font-bold py-4">Support 24/24</h3>
                             <p class="leading-relaxed">We use an application desgined a testing gnose to keep away</p>
@@ -139,7 +139,7 @@
                         <!-- card 2 -->
                         <div class="text-center cursor-pointer">
                             <div class="relative inline-block px-6 py-3 rounded-lg cursor-pointer bg-color-secondary">
-                                <p class="text-6xl">2</p>
+                                <p class="text-6xl lg:after:content-[''] lg:after:flex lg:after:bg-[url('/img/line.png')] lg:after:absolute lg:after:top-10 lg:after:left-32 2xl:after:left-52 lg:after:bg-no-repeat lg:after:h-7 lg:after:w-52">2</p>
                             </div>                            
                            <h3 class="text-xl font-bold py-4">Setup Your Profile</h3>
                            <p class="leading-relaxed">We use a customized application specifically desgined</p>
@@ -155,6 +155,51 @@
                     </div>
                 </div>
             </section>
+            <section id="testimonial">
+                <div class="container py-20">
+                    <div class="text-center m-auto mb-20 md:w-1/2">
+                        <h4 class="font-bold text-color-secondary mb-4">User Review</h4>
+                        <h1 class="title">What Clients Say About Our App After Use It</h1>
+                    </div>
+                    <!-- Reviwew Container-->
+                    <div class="mt-8">
+                        <div class="flex items-center justify-center flex-wrap">
+                            <img src="./img/user1.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic active-pic" onclick="showReview()">
+                            <img src="./img/user2.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+                            <img src="./img/user3.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+                            <img src="./img/user4.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+                            <img src="./img/user5.jpg" alt="" class="h-20 w-20 rounded-full p-1 m-3 cursor-pointer user-pic" onclick="showReview()">
+                        </div>
+                        <div class="grid place-items-center text-center m-auto md:w-4/5 min-h-[40vh]">
+                            <div class="user-text active-text">
+                                <p class="md:text-2xl mb-6">"This shuold be used to tell a story and include any testimonials you might have about your product or service for your clients"!</p>
+                                <h4 class="font-bold text-color-secondary mb-1">Markin Nesus</h4>
+                                <p>IOS developer</p>
+                            </div>
+                            <div class="user-text">
+                                <p class="md:text-2xl mb-6">"This shuold be used to tell a story and include any testimonials you might have about your product or service for your clients"!</p>
+                                <h4 class="font-bold text-color-secondary mb-1">Vera Duncan</h4>
+                                <p>Flutter developer</p>
+                            </div> 
+                            <div class="user-text">
+                                <p class="md:text-2xl mb-6">"This shuold be used to tell a story and include any testimonials you might have about your product or service for your clients"!</p>
+                                <h4 class="font-bold text-color-secondary mb-1">Pirtle Karol</h4>
+                                <p>Android developer</p>
+                            </div>    
+                            <div class="user-text">
+                                <p class="md:text-2xl mb-6">"This shuold be used to tell a story and include any testimonials you might have about your product or service for your clients"!</p>
+                                <h4 class="font-bold text-color-secondary mb-1">Mark Joe</h4>
+                                <p>React developer</p>
+                            </div>  
+                            <div class="user-text">
+                                <p class="md:text-2xl mb-6">"This shuold be used to tell a story and include any testimonials you might have about your product or service for your clients"!</p>
+                                <h4 class="font-bold text-color-secondary mb-1">Leila Domniuc</h4>
+                                <p>Angular developer</p>
+                            </div>                                                                               
+                        </div>
+                    </div>
+                </div>
+            </section>
         </main>
 
         <!--Agrego Javasript-->
@@ -162,7 +207,7 @@
             //Mobile menu
             const hamburger = document.querySelector('#hamburger');
             const menu = document.querySelector('#menu');
-            const hLink = document.querySelector('#hLink');
+            const hLink = document.querySelectorAll('#hLink');
             const faSolid = document.querySelector('.fa-solid');
 
             //Hace que se muestre de nuevo el menú
@@ -178,6 +223,28 @@
                     faSolid.classList.toggle('fa-xmark');
                 })
             })
+
+            //testiomial
+            const userTexts = document.getElementsByClassName("user-text");
+            const userPics = document.getElementsByClassName("user-pic");
+
+            function showReview()   {
+                for(userPic of userPics) {
+                    userPic.classList.remove("active-pic");
+                }
+                for(userText of userTexts) {
+                    userText.classList.remove("active-text")
+                }
+
+                //Agrega cada clic en las fotos de los usuarios
+                let i = Array.from(userPics).indexOf(event.target);
+
+                userPics[i].classList.add('active-pic');
+                
+                //Agrega cada texto al dar clic
+                userTexts[i].classList.add('active-text');
+
+            }
         </script>
 
 
