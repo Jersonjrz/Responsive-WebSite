@@ -28,7 +28,7 @@
 
 .user-text.active-text {
     display: block;
-    animation: moveup 1s line forwards;
+    animation: moveup 1s linear forwards;
 }
 
 .user-pic {
